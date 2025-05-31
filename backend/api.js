@@ -8,15 +8,23 @@ import {
   selecionaragenda,
   selecionaragendaById,
   excluiragenda,
-} from './controler/agenda.js'
+} from './agenda.js'
 
 const app = express()
 app.use(express.json())
 //const cors = require('cors')
 
 // Configuração do CORS
+const allowedOrigins = ['http://localhost:8080', 'https://denimalves.github.io']
+
 const corsOptions = {
-  origin: 'http://localhost:8080', // URL do seu frontend Quasar
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }

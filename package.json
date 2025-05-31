@@ -6,6 +6,7 @@
   "author": "Denner C Alves, Victoria's Mobile",
   "type": "module",
   "private": true,
+  "main": "api.js",
   "scripts": {
     "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{js,cjs,mjs,vue}\"",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
@@ -13,18 +14,22 @@
     "dev": "quasar dev",
     "build": "quasar build",
     "postinstall": "quasar prepare",
-    "deploy": "quasar build && gh-pages -d dist/spa"
+    "deploy": "quasar build && gh-pages -d dist/spa",
+    "start": "node api.js"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "axios": "^1.8.4",
+    "body-parser": "^2.2.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "html2pdf.js": "^0.10.3",
+    "mysql2": "^3.14.1",
     "quasar": "^2.16.0",
+    "sequelize": "^6.37.7",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
     "vue": "^3.4.18",

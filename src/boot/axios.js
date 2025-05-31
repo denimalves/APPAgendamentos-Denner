@@ -3,7 +3,7 @@ import { boot } from 'quasar/wrappers'
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000', // ajuste se necessário
+  baseURL: 'appagendamento-backend-production.up.railway.app', // ajuste se necessário
 })
 
 export default boot(({ app }) => {

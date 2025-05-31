@@ -87,6 +87,12 @@ const linksList = computed(() => {
       icon: 'today',
       link: '/agendamentos',
     },
+    {
+      title: 'Tarefas',
+      caption: 'Consulte Sua Lista de tarefas e lembretes',
+      icon: 'style',
+      link: '/tarefasLembretes',
+    },
   ]
   // Só adiciona o link de login se o usuário **não** estiver autenticado
   if (!estaAutenticado.value) {

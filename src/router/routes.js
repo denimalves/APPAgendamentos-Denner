@@ -15,7 +15,12 @@ const routes = [
         meta: { requiresAuth: true },
         component: () => import('../componentes/reunioesAgendadas.vue'),
       },
-
+      {
+        path: '/tarefasLembretes',
+        name: 'tarefasLembretes',
+        meta: { requiresAuth: true },
+        component: () => import('../paginas/tarefasLembretes.vue'),
+      },
       {
         path: '/login',
         name: 'login',
