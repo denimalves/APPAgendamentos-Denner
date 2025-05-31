@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{X as r,M as t}from"./index-DBCRJGBZ.js";const s={};function a(c,o){return t(),r("h3",null,"Tarefas e Lembretes")}const _=e(s,[["render",a]]);export{_ as default};
